@@ -1,6 +1,6 @@
 <?php
-require_once ('../dao/DAOLogin.php');
-require_once ('../dto/DTOLogin.php');
+require_once ('./dao/DAOLogin.php');
+require_once ('./dto/DTOLogin.php');
 
 class BOLogin {
     public function arrayToDTOLogin($arrayLog){

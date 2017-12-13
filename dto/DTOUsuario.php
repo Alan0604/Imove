@@ -12,103 +12,30 @@
  * @author Alan
  */
 class DTOUsuario {
-    private $pes_id;
-    private $pes_nome;
-    private $pes_email;
-    private $pes_endereco;
-    private $pes_cidade;
-    private $pes_senha;
-    private $pes_cpf;
-    private $pes_cep;
-    private $pes_telefone;
-    private $pes_genero;
-    private $pes_bairro;
-    
-    function getPes_endereco() {
-        return $this->pes_endereco;
+    private $usu_nome;
+    private $usu_senha;
+    private $usu_status;
+    function getUsu_nome() {
+        return $this->usu_nome;
     }
 
-    function getPes_cidade() {
-        return $this->pes_cidade;
+    function getUsu_senha() {
+        return $this->usu_senha;
     }
 
-    function getPes_senha() {
-        return $this->pes_senha;
+    function getUsu_status() {
+        return $this->usu_status;
     }
 
-    function getPes_cpf() {
-        return $this->pes_cpf;
+    function setUsu_nome($usu_nome) {
+        $this->usu_nome = $usu_nome;
     }
 
-    function getPes_cep() {
-        return $this->pes_cep;
+    function setUsu_senha($usu_senha) {
+        $this->usu_senha = $usu_senha;
     }
 
-    function getPes_telefone() {
-        return $this->pes_telefone;
-    }
-
-    function getPes_genero() {
-        return $this->pes_genero;
-    }
-
-    function getPes_bairro() {
-        return $this->pes_bairro;
-    }
-
-    function setPes_endereco($pes_endereco) {
-        $this->pes_endereco = $pes_endereco;
-    }
-
-    function setPes_cidade($pes_cidade) {
-        $this->pes_cidade = $pes_cidade;
-    }
-
-    function setPes_senha($pes_senha) {
-        $this->pes_senha = $pes_senha;
-    }
-
-    function setPes_cpf($pes_cpf) {
-        $this->pes_cpf = $pes_cpf;
-    }
-
-    function setPes_cep($pes_cep) {
-        $this->pes_cep = $pes_cep;
-    }
-
-    function setPes_telefone($pes_telefone) {
-        $this->pes_telefone = $pes_telefone;
-    }
-
-    function setPes_genero($pes_genero) {
-        $this->pes_genero = $pes_genero;
-    }
-
-    function setPes_bairro($pes_bairro) {
-        $this->pes_bairro = $pes_bairro;
-    }
-
-        function getPes_id() {
-        return $this->pes_id;
-    }
-
-    function getPes_nome() {
-        return $this->pes_nome;
-    }
-
-    function getPes_email() {
-        return $this->pes_email;
-    }
-
-    function setPes_id($pes_id) {
-        $this->pes_id = $pes_id;
-    }
-
-    function setPes_nome($pes_nome) {
-        $this->pes_nome = $pes_nome;
-    }
-
-    function setPes_email($pes_email) {
-        $this->pes_email = $pes_email;
+    function setUsu_status($usu_status) {
+        $this->usu_status = $usu_status;
     }
 }

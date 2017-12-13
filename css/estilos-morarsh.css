@@ -1,0 +1,23 @@
+*{
+    font-size: 16px;
+}
+
+main{
+    width: 64rem;
+    background-color: grey;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#filtros{
+    padding: 0.5rem;
+    width: 12rem;
+    float: left;
+    background-color: yellow;
+}
+
+#imoveis{
+    padding: 0.5rem;
+    float: left;
+    background-color: peru;
+}

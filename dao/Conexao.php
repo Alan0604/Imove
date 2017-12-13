@@ -4,7 +4,7 @@ class Conexao {
     public static $instance;
 
     private static $localdb = 'localhost';
-    private static $nomedb = 'IMOVEL';
+    private static $nomedb = 'Imovel';
     private static $usuariodb = 'root';
     private static $senhadb = '';
         

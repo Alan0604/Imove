@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="UTF-8"?><Db flnm="dbwrench_morarsh" nm="setac" ver="1.3.4">
+  <VerLbl/>
+  <VerNotes/>
+  <DefTblOpts/>
+  <DocFolder>E:\Docência\setac\setac-bd</DocFolder>
+  <Sch Cm="" nm="schemaA">
+    <Tbl UsSo="1" nm="caracteristicas">
+      <TblOpts/>
+      <Cl au="0" df="0" nm="car_quartos" nu="0">
+        <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="0" un="0"/>
+      </Cl>
+      <Cl au="0" df="0" nm="car_cozinhas" nu="0">
+        <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="0" un="0"/>
+      </Cl>
+      <Cl au="0" df="0" nm="car_salas_estar" nu="0">
+        <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="0" un="0"/>
+      </Cl>
+      <Cl au="0" df="0" nm="car_banheiros" nu="0">
+        <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="0" un="0"/>
+      </Cl>
+      <Cl au="0" df="0" nm="car_garagens" nu="0">
+        <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="0" un="0"/>
+      </Cl>
+      <Cl au="0" df="0" nm="car_suites" nu="0">
+        <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="0" un="0"/>
+      </Cl>
+      <Cl au="0" df="0" nm="car_churrasqueiras" nu="0">
+        <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="0" un="0"/>
+      </Cl>
+      <Cl au="0" df="0" nm="car_jardim" nu="0">
+        <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="0" un="0"/>
+      </Cl>
+      <Cl au="0" df="0" nm="car_dispensas" nu="0">
+        <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="0" un="0"/>
+      </Cl>
+      <Cl au="0" df="0" nm="car_salas_tv" nu="0">
+        <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="0" un="0"/>
+      </Cl>
+      <Cl au="0" df="0" nm="car_escritorios" nu="0">
+        <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="0" un="0"/>
+      </Cl>
+      <Cl au="0" df="0" nm="car_empregada" nu="0">
+        <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="0" un="0"/>
+      </Cl>
+      <Cl au="0" df="0" nm="car_porao" nu="0">
+        <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="0" un="0"/>
+      </Cl>
+      <Cl au="0" df="0" nm="car_piscinas" nu="0">
+        <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="0" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="imo_id" nu="1">
+        <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Fk deAc="3" nm="fk_caracteristicas_imoveis" prLkCl="imo_id" upAc="3">
+        <PrTb mn="0" nm="imoveis" oe="1" sch="schemaA" zr="1"/>
+        <CdTb mn="1" nm="caracteristicas" oe="0" sch="schemaA" zr="1"/>
+        <ClPr cdCl="imo_id" prCl="imo_id"/>
+      </Fk>
+      <UniqueConstraints/>
+      <SchTrHis/>
+    </Tbl>
+    <Tbl UsSo="1" nm="cidades">
+      <TblOpts/>
+      <Pk ClNs="cid_id" nm="pkcidades"/>
+      <Cl au="1" df="" nm="cid_id" nu="0">
+        <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="cid_nome" nu="0">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="cid_timestamp" nu="0">
+        <DT arr="0" ds="TimeStamp" en="" id="93" ln="null" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="est_id" nu="1">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="2" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="N" nm="cid_cepunico" nu="0">
+        <DT arr="0" ds="Char" en="" id="1" ln="1" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Fk deAc="3" nm="fk_cidades_estados" prLkCl="est_id" upAc="3">
+        <PrTb mn="0" nm="estados" oe="1" sch="schemaA" zr="1"/>
+        <CdTb mn="1" nm="cidades" oe="0" sch="schemaA" zr="1"/>
+        <ClPr cdCl="est_id" prCl="est_id"/>
+      </Fk>
+      <UniqueConstraints/>
+      <SchTrHis/>
+    </Tbl>
+    <Tbl UsSo="1" nm="enderecos">
+      <TblOpts/>
+      <Pk ClNs="end_id" nm="pkenderecos"/>
+      <Cl au="1" df="" nm="end_id" nu="0">
+        <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="end_complemento" nu="0">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="30" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="end_numero" nu="0">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="8" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="log_id" nu="1">
+        <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Fk deAc="3" nm="fk_enderecos_logradouros" prLkCl="log_id" upAc="3">
+        <PrTb mn="0" nm="logradouros" oe="1" sch="schemaA" zr="1"/>
+        <CdTb mn="1" nm="enderecos" oe="0" sch="schemaA" zr="1"/>
+        <ClPr cdCl="log_id" prCl="log_id"/>
+      </Fk>
+      <UniqueConstraints/>
+      <SchTrHis/>
+    </Tbl>
+    <Tbl UsSo="1" nm="estados">
+      <TblOpts/>
+      <Pk ClNs="est_id" nm="pkestados"/>
+      <Cl au="1" df="" nm="est_id" nu="0">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="2" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="est_nome" nu="0">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="est_timestamp" nu="0">
+        <DT arr="0" ds="TimeStamp" en="" id="93" ln="null" sc="null" sg="1" un="0"/>
+      </Cl>
+      <UniqueConstraints/>
+      <SchTrHis/>
+    </Tbl>
+    <Tbl UsSo="1" nm="imagens">
+      <TblOpts/>
+      <Pk ClNs="img_id" nm="pkimagens"/>
+      <Cl au="1" df="" nm="img_id" nu="0">
+        <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="0" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="img_nome" nu="0">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="20" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="img_timestamp" nu="0">
+        <DT arr="0" ds="TimeStamp" en="" id="93" ln="null" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="imo_id" nu="1">
+        <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Fk deAc="3" nm="fk_imagens_imoveis" prLkCl="imo_id" upAc="3">
+        <PrTb mn="0" nm="imoveis" oe="1" sch="schemaA" zr="1"/>
+        <CdTb mn="1" nm="imagens" oe="0" sch="schemaA" zr="1"/>
+        <ClPr cdCl="imo_id" prCl="imo_id"/>
+      </Fk>
+      <UniqueConstraints/>
+      <SchTrHis/>
+    </Tbl>
+    <Tbl UsSo="1" nm="imoveis">
+      <TblOpts/>
+      <Pk ClNs="imo_id" nm="pkimoveis"/>
+      <Cl au="1" df="" nm="imo_id" nu="0">
+        <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="imo_tipo" nu="0">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="15" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="imo_descricao" nu="1">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="255" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="imo_preco" nu="0">
+        <DT arr="0" ds="Decimal" en="" id="3" ln="10" sc="2" sg="0" un="0"/>
+      </Cl>
+      <Cl au="0" df="0" nm="imo_status" nu="0">
+        <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="0" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="end_id" nu="1">
+        <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="pes_id" nu="1">
+        <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Fk deAc="3" nm="fk_imoveis_enderecos" prLkCl="end_id" upAc="3">
+        <PrTb mn="0" nm="enderecos" oe="1" sch="schemaA" zr="1"/>
+        <CdTb mn="1" nm="imoveis" oe="0" sch="schemaA" zr="1"/>
+        <ClPr cdCl="end_id" prCl="end_id"/>
+      </Fk>
+      <Fk deAc="3" nm="fk_imoveis_pessoas" prLkCl="pes_id" upAc="3">
+        <PrTb mn="0" nm="pessoas" oe="1" sch="schemaA" zr="1"/>
+        <CdTb mn="1" nm="imoveis" oe="0" sch="schemaA" zr="1"/>
+        <ClPr cdCl="pes_id" prCl="pes_id"/>
+      </Fk>
+      <UniqueConstraints/>
+      <SchTrHis/>
+    </Tbl>
+    <Tbl UsSo="1" nm="logradouros">
+      <TblOpts/>
+      <Pk ClNs="log_id" nm="pklogradouros"/>
+      <Cl au="1" df="" nm="log_id" nu="0">
+        <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="log_cep" nu="0">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="9" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="log_nome" nu="0">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="log_tipo" nu="0">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="10" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="log_bairro" nu="0">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="log_timestamp" nu="0">
+        <DT arr="0" ds="TimeStamp" en="" id="93" ln="null" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="cid_id" nu="1">
+        <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Fk deAc="3" nm="fk_logradouros_cidades" prLkCl="cid_id" upAc="3">
+        <PrTb mn="0" nm="cidades" oe="1" sch="schemaA" zr="1"/>
+        <CdTb mn="1" nm="logradouros" oe="0" sch="schemaA" zr="1"/>
+        <ClPr cdCl="cid_id" prCl="cid_id"/>
+      </Fk>
+      <UniqueConstraints/>
+      <SchTrHis/>
+    </Tbl>
+    <Tbl UsSo="1" nm="pessoas">
+      <TblOpts/>
+      <Pk ClNs="pes_id" nm="pkpessoas"/>
+      <Cl au="1" df="" nm="pes_id" nu="0">
+        <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="pes_nome" nu="0">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="100" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="pes_genero" nu="0">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="9" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="pes_rg" nu="0">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="15" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="pes_cpf" nu="0">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="15" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="pes_fone" nu="0">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="15" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="pes_email" nu="0">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="30" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="pes_timestamp" nu="0">
+        <DT arr="0" ds="TimeStamp" en="" id="93" ln="null" sc="null" sg="1" un="0"/>
+      </Cl>
+      <UniqueConstraints/>
+      <SchTrHis/>
+    </Tbl>
+    <Tbl UsSo="1" nm="usuarios">
+      <TblOpts/>
+      <Pk ClNs="pes_id" nm="pkusuarios"/>
+      <Cl au="0" df="" nm="usu_nome" nu="0">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="20" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="usu_senha" nu="0">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="255" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="A" nm="usu_status" nu="0">
+        <DT arr="0" ds="Char" en="" id="1" ln="null" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="pes_id" nu="1">
+        <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Fk deAc="3" nm="fk_pessoas_em_usuarios" prLkCl="pes_id" upAc="3">
+        <PrTb mn="0" nm="pessoas" oe="1" sch="schemaA" zr="1"/>
+        <CdTb mn="1" nm="usuarios" oe="0" sch="schemaA" zr="1"/>
+        <ClPr cdCl="pes_id" prCl="pes_id"/>
+      </Fk>
+      <UniqueConstraints/>
+      <SchTrHis/>
+    </Tbl>
+    <CustomTypes/>
+  </Sch>
+  <Dgm nm="morarsh_base">
+    <RnCf ClkAct="true" FtSz="11" lkStgy="RightAngleStrategy" zm="1.0">
+      <VbCfg>
+        <Fg ky="Auto Number" vl="0"/>
+        <Fg ky="Check" vl="0"/>
+        <Fg ky="Comment" vl="0"/>
+        <Fg ky="Data Type" vl="1"/>
+        <Fg ky="Default" vl="0"/>
+        <Fg ky="ENUM Values" vl="0"/>
+        <Fg ky="Length" vl="1"/>
+        <Fg ky="Name" vl="1"/>
+        <Fg ky="Nullable" vl="0"/>
+        <Fg ky="Schema Name" vl="0"/>
+        <Fg ky="Signed" vl="0"/>
+      </VbCfg>
+    </RnCf>
+    <DiaProps>
+      <Show AllCols="1" FkCols="1" FkNms="0" PkCols="1"/>
+      <ErNotation>BarkerErNotation</ErNotation>
+      <DbTableRectangleFill>HeaderFooterFill</DbTableRectangleFill>
+      <svg path=""/>
+    </DiaProps>
+    <TbGl bkCl="ffff0033" sch="schemaA" tbl="pessoas" x="7" y="117"/>
+    <TbGl bkCl="ffff0033" sch="schemaA" tbl="enderecos" x="609" y="144"/>
+    <TbGl bkCl="ffff0033" sch="schemaA" tbl="logradouros" x="620" y="251"/>
+    <TbGl bkCl="ffff0033" sch="schemaA" tbl="cidades" x="623" y="399"/>
+    <TbGl bkCl="ffff0033" sch="schemaA" tbl="estados" x="627" y="516"/>
+    <TbGl bkCl="ffff0033" sch="schemaA" tbl="usuarios" x="22" y="10"/>
+    <TbGl bkCl="ff6666ff" sch="schemaA" tbl="imoveis" x="311" y="141"/>
+    <TbGl bkCl="ff6666ff" sch="schemaA" tbl="caracteristicas" x="312" y="284"/>
+    <TbGl bkCl="ff6666ff" sch="schemaA" tbl="imagens" x="313" y="17"/>
+    <FkGl bkCl="ff000000" childEdge="NORTH" nm="schemaA.caracteristicas.fk_caracteristicas_imoveis" parentEdge="SOUTH" positioner="OneLineUserLinkPositioner">
+      <positionableLines>
+        <positionableLine lineRole="SINGLE_LINE" x1="439" x2="439" y1="259" y2="284"/>
+      </positionableLines>
+    </FkGl>
+    <FkGl bkCl="ff000000" childEdge="SOUTH" nm="schemaA.cidades.fk_cidades_estados" parentEdge="NORTH" positioner="OneLineUserLinkPositioner">
+      <positionableLines>
+        <positionableLine lineRole="SINGLE_LINE" x1="744" x2="744" y1="516" y2="491"/>
+      </positionableLines>
+    </FkGl>
+    <FkGl bkCl="ff000000" childEdge="SOUTH" nm="schemaA.enderecos.fk_enderecos_logradouros" parentEdge="NORTH" positioner="OneLineUserLinkPositioner">
+      <positionableLines>
+        <positionableLine lineRole="SINGLE_LINE" x1="739" x2="739" y1="251" y2="223"/>
+      </positionableLines>
+    </FkGl>
+    <FkGl bkCl="ff000000" childEdge="SOUTH" nm="schemaA.imagens.fk_imagens_imoveis" parentEdge="NORTH" positioner="OneLineUserLinkPositioner">
+      <positionableLines>
+        <positionableLine lineRole="SINGLE_LINE" x1="437" x2="437" y1="141" y2="96"/>
+      </positionableLines>
+    </FkGl>
+    <FkGl bkCl="ff000000" childEdge="EAST" nm="schemaA.imoveis.fk_imoveis_enderecos" parentEdge="WEST" positioner="OneLineUserLinkPositioner">
+      <positionableLines>
+        <positionableLine lineRole="SINGLE_LINE" x1="609" x2="559" y1="188" y2="188"/>
+      </positionableLines>
+    </FkGl>
+    <FkGl bkCl="ff000000" childEdge="WEST" nm="schemaA.imoveis.fk_imoveis_pessoas" parentEdge="EAST" positioner="OneLineUserLinkPositioner">
+      <positionableLines>
+        <positionableLine lineRole="SINGLE_LINE" x1="254" x2="311" y1="186" y2="186"/>
+      </positionableLines>
+    </FkGl>
+    <FkGl bkCl="ff000000" childEdge="SOUTH" nm="schemaA.logradouros.fk_logradouros_cidades" parentEdge="NORTH" positioner="OneLineUserLinkPositioner">
+      <positionableLines>
+        <positionableLine lineRole="SINGLE_LINE" x1="743" x2="743" y1="399" y2="369"/>
+      </positionableLines>
+    </FkGl>
+    <FkGl bkCl="ff000000" childEdge="SOUTH" nm="schemaA.usuarios.fk_pessoas_em_usuarios" parentEdge="NORTH" positioner="OneLineUserLinkPositioner">
+      <positionableLines>
+        <positionableLine lineRole="SINGLE_LINE" x1="130" x2="130" y1="117" y2="89"/>
+      </positionableLines>
+    </FkGl>
+    <Notes/>
+    <Zones/>
+  </Dgm>
+  <RnmMgr NxRnmId="48">
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="palaestras" SupCls="Schema" SupNme="schemaA">
+      <Rnm id="1" nNm="pal_id" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="minicursos" SupCls="Schema" SupNme="schemaA">
+      <Rnm id="2" nNm="mic_id" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="edicoes" SupCls="Schema" SupNme="schemaA">
+      <Rnm id="3" nNm="edi_id" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="pessoas" SupCls="Schema" SupNme="schemaA">
+      <Rnm id="34" nNm="pes_id" oNm="par_id"/>
+      <Rnm id="4" nNm="par_id" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Table" ParCls="Schema" ParNme="schemaA" SupCls="" SupNme="">
+      <Rnm id="5" nNm="edicoes" oNm="edicao"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="atividades" SupCls="Schema" SupNme="schemaA">
+      <Rnm id="6" nNm="ati_id" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="enderecos" SupCls="Schema" SupNme="schemaA">
+      <Rnm id="7" nNm="end_id" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="logradouros" SupCls="Schema" SupNme="schemaA">
+      <Rnm id="8" nNm="log_id" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="cidades" SupCls="Schema" SupNme="schemaA">
+      <Rnm id="9" nNm="cid_id" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="estados" SupCls="Schema" SupNme="schemaA">
+      <Rnm id="10" nNm="est_id" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="arquivos" SupCls="Schema" SupNme="schemaA">
+      <Rnm id="13" nNm="arq_id" oNm="tra_id"/>
+      <Rnm id="11" nNm="tra_id" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Table" ParCls="Schema" ParNme="schemaA" SupCls="" SupNme="">
+      <Rnm id="12" nNm="arquivos" oNm="trabalhos"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="inscricoes" SupCls="Schema" SupNme="schemaA">
+      <Rnm id="14" nNm="ins_id" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="recursos" SupCls="Schema" SupNme="schemaA">
+      <Rnm id="15" nNm="rec_id" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="recursos_atividades" SupCls="Schema" SupNme="schemaA">
+      <Rnm id="16" nNm="rat_id" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="pacotes" SupCls="Schema" SupNme="schemaA">
+      <Rnm id="17" nNm="pac_id" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="atividades_pacotes" SupCls="Schema" SupNme="schemaA">
+      <Rnm id="18" nNm="pat_id" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="usuarios" SupCls="Schema" SupNme="schemaA">
+      <Rnm id="19" nNm="usu_id" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="pessoas" SupCls="Schema" SupNme="schemaA">
+      <Rnm id="39" nNm="pes_instituicao" oNm="par_instituicao"/>
+      <Rnm id="20" nNm="par_instituicao" oNm="par_senha"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="modulos" SupCls="Schema" SupNme="schemaA">
+      <Rnm id="21" nNm="mod_id" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="presencas" SupCls="Schema" SupNme="schemaA">
+      <Rnm id="22" nNm="pre_id" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="menus" SupCls="Schema" SupNme="schemaA">
+      <Rnm id="25" nNm="men_id" oNm="pes_id"/>
+      <Rnm id="23" nNm="pes_id" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Table" ParCls="Schema" ParNme="schemaA" SupCls="" SupNme="">
+      <Rnm id="24" nNm="menus" oNm="pessoas"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="pessoas" SupCls="Schema" SupNme="schemaA">
+      <Rnm id="26" nNm="per_id" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="menus" SupCls="Schema" SupNme="schemaA">
+      <Rnm id="31" nNm="men_evento" oNm="men_arquivo"/>
+      <Rnm id="27" nNm="men_arquivo" oNm="men_sistema"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="pessoas" SupCls="Schema" SupNme="schemaA">
+      <Rnm id="36" nNm="pes_rg" oNm="par_rg"/>
+      <Rnm id="28" nNm="par_rg" oNm="par_doctipo"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="pessoas" SupCls="Schema" SupNme="schemaA">
+      <Rnm id="37" nNm="pes_cpf" oNm="par_cpf"/>
+      <Rnm id="29" nNm="par_cpf" oNm="par_docnumero"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="menus" SupCls="Schema" SupNme="schemaA">
+      <Rnm id="30" nNm="men_processo" oNm="men_evento"/>
+    </RnmCh>
+    <RnmCh ObjCls="Table" ParCls="Schema" ParNme="schemaA" SupCls="" SupNme="">
+      <Rnm id="32" nNm="pessoas" oNm="permissoes"/>
+    </RnmCh>
+    <RnmCh ObjCls="Table" ParCls="Schema" ParNme="schemaA" SupCls="" SupNme="">
+      <Rnm id="33" nNm="pessoas" oNm="participantes"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="pessoas" SupCls="Schema" SupNme="schemaA">
+      <Rnm id="35" nNm="pes_nome" oNm="par_nome"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="pessoas" SupCls="Schema" SupNme="schemaA">
+      <Rnm id="38" nNm="pes_email" oNm="par_email"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="pessoas" SupCls="Schema" SupNme="schemaA">
+      <Rnm id="40" nNm="pes_timestamp" oNm="par_timestamp"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="imoveis" SupCls="Schema" SupNme="schemaA">
+      <Rnm id="41" nNm="imo_id" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="caracteristicas" SupCls="Schema" SupNme="schemaA">
+      <Rnm id="42" nNm="imo_id" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="caracteristicas" SupCls="Schema" SupNme="schemaA">
+      <Rnm id="43" nNm="car_suites" oNm="car_suite"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="caracteristicas" SupCls="Schema" SupNme="schemaA">
+      <Rnm id="44" nNm="car_cozinhas" oNm="car_cozinha"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="caracteristicas" SupCls="Schema" SupNme="schemaA">
+      <Rnm id="45" nNm="car_salas_tv" oNm="car_sala_tv"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="caracteristicas" SupCls="Schema" SupNme="schemaA">
+      <Rnm id="46" nNm="car_salas_estar" oNm="car_sala_estar"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="imagens" SupCls="Schema" SupNme="schemaA">
+      <Rnm id="47" nNm="img_id" oNm="Id"/>
+    </RnmCh>
+  </RnmMgr>
+  <DbDocOptionMgr>
+    <BasicOptionMgr>
+      <Name>db.doc.option.mgr</Name>
+      <BoolOpt lbl="Diagrams" nm="doc.diagrams" on="1" spl="0"/>
+      <BoolOpt lbl="Foreign Keys" nm="doc.fks" on="1" spl="0"/>
+      <BoolOpt lbl="Indexes" nm="doc.indexes" on="1" spl="0"/>
+      <BoolOpt lbl="Overwrite CSS File" nm="doc.overwrite.css" on="1" spl="0"/>
+      <BoolOpt lbl="Procedures" nm="doc.procs" on="1" spl="0"/>
+      <BoolOpt lbl="Schemas" nm="doc.schemas" on="1" spl="0"/>
+      <BoolOpt lbl="Sequences" nm="doc.sequences" on="1" spl="0"/>
+      <BoolOpt lbl="Tables" nm="doc.tables" on="1" spl="0"/>
+      <BoolOpt lbl="Triggers" nm="doc.triggers" on="1" spl="0"/>
+      <BoolOpt lbl="Views" nm="doc.views" on="1" spl="0"/>
+    </BasicOptionMgr>
+  </DbDocOptionMgr>
+  <OpenEditors>
+    <OpenEditor ClsNm="Diagram" fqn="null.morarsh_base" selected="1"/>
+  </OpenEditors>
+  <TreePaths>
+    <TreePath/>
+    <TreePath>/Schemas (1)</TreePath>
+    <TreePath>/Schemas (1)/schemaA</TreePath>
+    <TreePath>/Schemas (1)/schemaA/Tables (9)</TreePath>
+    <TreePath>/Diagrams (1)</TreePath>
+  </TreePaths>
+  <SqlTexts/>
+</Db>
